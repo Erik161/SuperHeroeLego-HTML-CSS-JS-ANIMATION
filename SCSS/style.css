@@ -33,10 +33,12 @@ body {
 }
 
 .navbar {
-  background: white;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: nav;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .navbar__content {
@@ -71,7 +73,7 @@ body {
 .navbar__li, .navbar a {
   text-decoration: none;
   color: var(--red);
-  font-weight: 100px;
+  font-weight: 300px;
 }
 
 @-webkit-keyframes navbar {
@@ -130,6 +132,7 @@ body {
 .main-content p:last-child {
   font-weight: 100;
   margin: 0;
+  width: 60%;
 }
 
 @-webkit-keyframes main-content {
