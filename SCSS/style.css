@@ -157,6 +157,106 @@ body {
   }
 }
 
+.side-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  grid-area: aside;
+}
+
+.side-content p {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  font-size: 36px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  opacity: 0;
+  -webkit-animation-name: side-content-text;
+          animation-name: side-content-text;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.side-content img {
+  width: 100%;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-column: 2/6;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
+  grid-row: 1/6;
+  -webkit-animation: 2s side-content-img 0.5s ease-in-out;
+          animation: 2s side-content-img 0.5s ease-in-out;
+}
+
+.side-content div {
+  background: var(--yellow);
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
+  grid-column: 4/7;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  height: 100%;
+}
+
+@-webkit-keyframes side-content-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes side-content-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes side-content-img {
+  0% {
+    -webkit-transform: translateX(600px);
+            transform: translateX(600px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes side-content-img {
+  0% {
+    -webkit-transform: translateX(600px);
+            transform: translateX(600px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
 /*------- Animation Preloader----------- */
 .loader {
   background: var(--yellow);
