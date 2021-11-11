@@ -6,7 +6,7 @@
 }
 
 
-
+// BODY
 body{
     height: 100vh;
     margin: 0;
@@ -14,12 +14,14 @@ body{
     font-family: 'Lato', sans-serif;
 }
 
+// PAGE
 .page{
     position: relative;
     height: 100vh;
     width: 100%;
 }
 
+// CONTAINER
 .container{
     position: absolute;
     z-index: 1;
@@ -33,6 +35,7 @@ body{
     width: 100%;
 }
 
+// NAVBAR
 .navbar{
     grid-area:nav;
     display: flex;
@@ -64,6 +67,7 @@ body{
     }
 }
 
+// KEYFRAMES NAVBAR
 @keyframes navbar {
     0%{
         transform: translateY(-200px);
@@ -75,6 +79,7 @@ body{
 
 }
 
+// MAIN.CONTENT
 .main-content{
     display: flex;
     grid-area: section;
@@ -103,8 +108,7 @@ body{
     width:60%;
 }
 
-
-
+// KEYFRAMES MAIN-CONTENT
 @keyframes main-content {
     0%{
         transform: translateY(-600px);
@@ -115,7 +119,7 @@ body{
     }
 }
 
-
+// SIDE-CONTENT
 .side-content{
     display: grid;
     grid-template-columns: repeat(6, 1fr); //Repeat No. Columns and sizes
@@ -154,7 +158,7 @@ body{
         z-index: 2;
     }
 }
-
+// FOOTER
 .footer{
     display: flex;
     justify-content: space-evenly;
@@ -195,6 +199,7 @@ body{
     }
 }
 
+// KEYFRAMES FOOTER
 @keyframes footer {
     0%{
         transform: translateY(100%);
@@ -206,6 +211,7 @@ body{
 }
 
 
+// KEYFRAMES SIDE-CONTENT-TEXT
 @keyframes side-content-text{
     0%{
         opacity: 0;
@@ -217,7 +223,7 @@ body{
 }
 
 
-
+// KEYFRAMES SIDE-CONTENT-IMG
 @keyframes side-content-img {
     0%{
         transform: translateX(600px);
@@ -244,6 +250,7 @@ body{
     animation:loader 0.1s linear forwards;
 }
 
+// KEYFRAMES LOADER
 @keyframes loader {
     0%{
         opacity: 1;
@@ -285,6 +292,7 @@ body{
 }
 
 
+// KEYFRAMES SCALING
 @keyframes scaling{
 
 0%, 100%{
