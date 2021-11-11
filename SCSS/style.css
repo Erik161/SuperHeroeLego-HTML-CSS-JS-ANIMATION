@@ -175,6 +175,7 @@ body {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   font-size: 36px;
+  font-weight: bold;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / 2;
@@ -192,6 +193,7 @@ body {
           animation-timing-function: ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  z-index: 1;
 }
 
 .side-content img {
@@ -200,10 +202,11 @@ body {
   -ms-grid-column-span: 4;
   grid-column: 2/6;
   -ms-grid-row: 1;
-  -ms-grid-row-span: 5;
-  grid-row: 1/6;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
   -webkit-animation: 2s side-content-img 0.5s ease-in-out;
           animation: 2s side-content-img 0.5s ease-in-out;
+  z-index: 3;
 }
 
 .side-content div {
@@ -215,6 +218,90 @@ body {
   -ms-grid-row-span: 1;
   grid-row: 1/2;
   height: 100%;
+  z-index: 2;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background: var(--yellow);
+  border-radius: 0 80px 0 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-animation-name: footer;
+          animation-name: footer;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.footer div {
+  background: var(--blue);
+  width: 130px;
+  height: 50%;
+  border-radius: 20px 20px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer div img {
+  width: 150px;
+  position: absolute;
+  bottom: 27px;
+  -webkit-transform: translateY(0px) scale(1);
+          transform: translateY(0px) scale(1);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+.footer div:hover img {
+  cursor: pointer;
+  -webkit-transform: translateY(-20px) scale(1.1);
+          transform: translateY(-20px) scale(1.1);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+@-webkit-keyframes footer {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes footer {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 
 @-webkit-keyframes side-content-text {
