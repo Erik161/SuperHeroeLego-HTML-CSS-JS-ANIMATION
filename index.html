@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/SCSS/style.css">
-    <title>Document</title>
+    <title>Super Hero</title>
 </head>
 <body>
     <div class="page">
@@ -48,13 +48,13 @@
             </section>
 
             <section class="footer">
-                <div>
+                <div id="button1">
                     <img src="img/spiderman.png" alt="">
                 </div>
-                <div>
+                <div id="button2">
                     <img src="img/robin.png" alt="">
                 </div>
-                <div>
+                <div id="button3">
                     <img src="img/batman.png" alt="">
                 </div>
             </section>
@@ -71,9 +71,53 @@
 
         <!-- Modal -->
         <section class="modal hidden">
+            <div class="modal__content">
+                <img class="modal__close" src="https://img.icons8.com/ios/50/000000/cancel.png"/>
 
+                <div class="modal__slider">
+                    <input type="radio" name="slider-1" id="radio-1" checked>
+                    <input type="radio" name="slider-1" id="radio-2" >
+                    <input type="radio" name="slider-1" id="radio-3" >
+
+                    <div class="cards">
+                        <label for="radio-1" id="card-1" class="card">
+                            <img src="img/spider1.png" alt="">
+                        </label>
+
+                        <label for="radio-2" id="card-2" class="card">
+                            <img src="img/spider2.png" alt="">
+                        </label>
+
+                        <label for="radio-3" id="card-3" class="card">
+                            <img src="img/spider3.png" alt="">
+                        </label>
+                    </div>
+                </div>
+            </div>
         </section>
 
     </div>
+
+
+
+<script>
+    const modal = document.querySelector('.modal');
+    const button1 = document.querySelector('#button1');
+    const closeb = document.querySelector('.modal__close')
+
+    button1.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('visible');
+    });
+
+
+    closeb.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('visible');
+    });
+
+
+
+</script>    
 </body>
 </html>
